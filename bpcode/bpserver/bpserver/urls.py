@@ -19,6 +19,7 @@ from django.urls import path,re_path
 from app01 import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 urlpatterns = [
     path("", views.index),
     path("login/", views.login),
@@ -29,7 +30,10 @@ urlpatterns = [
     path("checkversion/", views.checkversion),
     path("weblogin/", views.weblogin),
     path("webensure/", views.webensure),
+    path("ping/", views.ping),
     re_path(r"^getdirs/(?P<path>.*)$", views.getdirs),
     re_path(r"^clientgetdirs/(?P<path>.*)$", views.clientgetdirs),
+    path("doc/", TemplateView.as_view(template_name="index.html"), name="doc"),
+    path("dirishere/",TemplateView.as_view(template_name="index.html"), name="dirishere"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

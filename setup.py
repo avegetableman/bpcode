@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
+
 from setuptools import setup, find_packages
 
 setup(
     name="bpcode",
-    version="0.1.0",
+    version="0.3.0",
     author="zhuoyue",
     author_email="2814401134@qq.com",
     packages=find_packages(),
@@ -10,7 +12,8 @@ setup(
     install_requires=[
         "django>=4.0",
         "django-cors-headers",
-        "python-dotenv"
+        "python-dotenv",
+        "whitenoise"
     ],
     entry_points={
         'console_scripts': [

@@ -213,3 +213,7 @@ def clientgetdirs(request, path=""):
         with open(dir_path, 'rb') as f:
             content = f.read()
             return JsonResponse({"file":base64.b64encode(content).decode("utf-8"),"isdir":False}, status=200)
+
+@csrf_exempt
+def ping(request):
+    return JsonResponse({"status":True})

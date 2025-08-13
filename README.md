@@ -59,3 +59,11 @@
 4. 注意事项
 
    - 本工具安全性有限，不建议用于敏感项目。有的bug甚至会暴露整个磁盘文件，以后有空再改
+
+5.下载文件
+
+bpdown --password  --name  --version --host
+
+version版本号可以通过页面http://host:8888/查看,比如test2，那么name就是test，版本号是2
+
+0.2.0新增断网不报错，bpdown工具，修复了前端路由问题
